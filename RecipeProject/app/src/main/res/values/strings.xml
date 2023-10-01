@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Recipe App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="recipe_detail">Recipe Detail</string>
+    <string name="Save">Save</string>
+    <string name="recipe_slogan">Dünya bir ev olsaydı mutfağı Gaziantep olurdu!</string>
+    <string name="recipe_app">Recipe App</string>
+
+</resources>
