@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.example.sisterslabprojectrecipes.home.RecipeHomeFragment"
+        android:label="fragment_recipe_list"
+        tools:layout="@layout/fragment_recipe_home" >
+        <action
+            android:id="@+id/action_recipeListFragment_to_recipeDetailFragment"
+            app:destination="@id/recipeDetailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_addFragment"
+            app:destination="@id/addFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <action
+            android:id="@+id/action_recipeListFragment_to_signInUpFragment"
+            app:destination="@id/signInUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.example.sisterslabprojectrecipes.detail.RecipeDetailFragment"
+        android:label="fragment_recipe_detail"
+        tools:layout="@layout/fragment_recipe_detail" >
+        <argument
+            android:name="recipeId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_recipeDetailFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.sisterslabprojectrecipes.add.AddFragment"
+        android:label="AddFragment"
+        tools:layout="@layout/fragment_add"
+        >
+        <action
+            android:id="@+id/action_addFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.sisterslabprojectrecipes.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash"
+        >
+        <action
+            android:id="@+id/action_splashFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInUpFragment"
+        android:name="com.example.sisterslabprojectrecipes.comment.SignInUpFragment"
+        android:label="fragment_sign_in_up"
+        tools:layout="@layout/fragment_sign_in_up" >
+        <action
+            android:id="@+id/action_signInUpFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/commentFragment"
+        android:name="com.example.sisterslabprojectrecipes.comment.CommentFragment"
+        android:label="fragment_comment"
+        tools:layout="@layout/fragment_comment" >
+        <action
+            android:id="@+id/action_commentFragment_to_signInUpFragment"
+            app:destination="@id/signInUpFragment" />
+        <action
+            android:id="@+id/action_commentFragment_to_shareCommentFragment"
+            app:destination="@id/shareCommentFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shareCommentFragment"
+        android:name="bugcompany.example.recipeapp.ui.comment.ShareCommentFragment"
+        android:label="fragment_share_comment"
+        tools:layout="@layout/fragment_share_comment" >
+        <action
+            android:id="@+id/action_shareCommentFragment_self"
+            app:destination="@id/shareCommentFragment" />
+        <action
+            android:id="@+id/action_shareCommentFragment_to_commentFragment"
+            app:destination="@id/commentFragment" />
+    </fragment>
+</navigation>

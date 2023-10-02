@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "931543360523",
+    "project_id": "recipeapp-94e2f",
+    "storage_bucket": "recipeapp-94e2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:931543360523:android:9291bc06df3eb4da00d30e",
+        "android_client_info": {
+          "package_name": "com.example.sisterslabprojectrecipes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfr8dpt0uDnTL4xOX5WWcTJWFVpbCKev4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
